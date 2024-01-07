@@ -33,7 +33,7 @@ function validateGuess(guess) {
     alert('PLease enter a  number less than 100');
   } else {
     prevGuess.push(guess);
-    if (numGuess === 11) {
+    if (numGuess === 10) {
       displayGuess(guess);
       displayMessage(`Game Over. Random number was ${randomNumber}`);
       endGame();
@@ -46,12 +46,24 @@ function validateGuess(guess) {
 
 function checkGuess(guess) {
   if (guess === randomNumber) {
-    displayMessage(`You guessed it right`);
+    displayMessage(`WOAHHH !!! You Got It. ${randomNumber} is Correct `);
     endGame();
-  } else if (guess < randomNumber) {
+  } else if (guess <= randomNumber-20) {
     displayMessage(`Number is TOOO low`);
-  } else if (guess > randomNumber) {
+  } else if (guess <= randomNumber-10 && guess> randomNumber-20) {
+    displayMessage(`Number is getting closer, but still LOW`);
+  } else if (guess >= randomNumber+10 && guess< randomNumber+20) {
+    displayMessage(`Number is getting closer, but still HIGH`);
+  } else if (guess >= randomNumber+20) {
     displayMessage(`Number is TOOO High`);
+  } else if (guess > randomNumber-10 && guess< randomNumber-5) {
+    displayMessage(`Number is TOOO CLOSE, but still LOW`);
+  } else if (guess >= randomNumber+5 && guess< randomNumber+10) {
+    displayMessage(`Number is TOOO CLOSE, but still HIGH`);
+  } else if (guess >= randomNumber-5 && guess< randomNumber) {
+    displayMessage(`You are almost there !!! but still LOW`);
+  } else if (guess < randomNumber+5 && guess>randomNumber) {
+    displayMessage(`You are almost there !!! but still High`);
   }
 }
 
@@ -86,6 +98,7 @@ function newGame() {
     remaining.innerHTML = `${11 - numGuess} `;
     userInput.removeAttribute('disabled');
     startOver.removeChild(p);
+    displayMessage(``);
 
     playGame = true;
   });
