@@ -3,11 +3,12 @@ html {
   }
   
   body {
-    width: 300px;
-    max-width: 750px;
-    min-width: 480px;
+    width: 100%;
     margin: 0 auto;
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
   }
   
   .lastResult {
@@ -74,6 +75,7 @@ html {
   }
   
   #wrapper {
+    margin-top: 50px;
     box-sizing: border-box;
     text-align: center;
     width: 500px;
@@ -81,13 +83,18 @@ html {
     background-color: #763dd3;
     color: #fff;
     font-size: 25px;
+    border-radius: 10px;
+
   }
   
   h1 {
     background-color:#ffffff;
     color: rgba(91, 6, 139, 0.666);
     text-align: center;
+    margin-top: 0px;
     margin-bottom: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
   
   p {
