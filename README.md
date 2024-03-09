@@ -32,5 +32,5 @@ And when User correctly guess the correct number !!! BINGO<br>
 
 Why not challenge yourself and give it a try !!!
 
-https://www.hackerrank.com/gcetcse-ds-ai-hackwithinfy-1709702758
 
+https://www.hackerrank.com/gcet-hackwithinfy-ds-ai-1709956390
